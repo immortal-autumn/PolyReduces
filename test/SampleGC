@@ -1,0 +1,8 @@
+c Test clause - Dimacs CNF format
+c
+p gc 5 5
+0 1 1 1 1
+1 0 1 1 1
+1 1 0 1 1
+1 1 1 0 1
+1 1 1 1 0

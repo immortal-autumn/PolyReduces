@@ -1,0 +1,52 @@
+** Important **
+
+- Usage:
+java -jar Main [Input filepath] [Original type] [Target type] [output filepath]
+java Main [Input filepath] [Original type] [Target type] [output filepath]
+
+- Type Keywords:
+3SAT SAT GC Clique VC
+
+- Types (with keyword):
+3SAT reduce to GC
+SAT reduce to 3SAT
+GC (Graph coloring) reduce to SAT
+SAT reduce to Clique
+SAT reduce to VC (Vertex Cover)
+
+- Input format
+SAT, 3SAT: Dimacs CNF format:
+
+c Example CNF in Dimacs format
+c A cnf encoding of the letter SAT problem used in Search lectures
+c Comment lines before declaration start with c
+c Declaration starts with p, gives format (cnf) and num vars/clauses
+c Variables are 1 ... num vars, Negated variables are negative integers.
+c Clauses are lists of positive or negated variables terminated by a 0
+c
+p cnf 3 7
+1 2 3 0
+1 2 -3 0
+1 -2 3 0
+-2 -3 1 0
+-1 2 3 0
+3 -2 -1 0
+-1 -2 -3 0
+
+Graph coloring:
+c
+p gc (n-vertex) (m-colors)
+(Adjacency Matrix)
+1 1 0 0 1 0
+1 0 1 0 1 0
+0 1 0 1 0 0
+0 0 1 0 1 1
+1 1 0 1 0 0
+0 0 0 1 0 0
+
+Reference:
+CS3105 Practical 2 requirement
+https://studres.cs.st-andrews.ac.uk/CS3105/Practicals/CS3105%20AI%20Search%20Practical%202/CS3105-2020-Prac2-WalkSAT.pdf
+
+Satisfiability Suggested Format
+https://studres.cs.st-andrews.ac.uk/CS3105/Practicals/CS3105%20AI%20Search%20Practical%202/dimacs-cnf.pdf
